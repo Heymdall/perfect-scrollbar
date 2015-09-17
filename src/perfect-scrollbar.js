@@ -198,6 +198,11 @@
             railYOffset.left = scrollbarYLeft + $this.scrollLeft();
           }
         }
+        if (railYOffset.top !== 0) {
+          $this.addClass('ps-y-scrolled');
+        } else {
+          $this.removeClass('ps-y-scrolled');
+        }
         $scrollbarYRail.css(railYOffset);
 
         $scrollbarX.css({left: scrollbarXLeft, width: scrollbarXWidth - railBorderXWidth});
